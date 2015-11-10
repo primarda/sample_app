@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'nsds/nwro1_nsr_001'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
