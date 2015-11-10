@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'nsds/nwro1_nsr_001'
+  get 'nsds/nsd_001_v1'
+  get 'nsrs/nwro1_nsr_001'
 
-  get 'static_pages/home'
-
+  root 'static_pages#home'
   get 'static_pages/help'
+  get 'static_pages/about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

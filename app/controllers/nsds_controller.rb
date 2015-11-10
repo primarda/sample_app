@@ -1,8 +1,308 @@
 class NsdsController < ApplicationController
-  def nwro1_nsr_001
-    personal = {"constituentVl"=>[{"instantiateMode"=>"0", "vlFlavourIdReference"=>"nob_core_flavour", "vlReference"=>"nwro1_vld_001"}, {"instantiateMode"=>"0", "vlFlavourIdReference"=>"nob_giji_flavour", "vlReference"=>"nwro1_vld_002"}, {"instantiateMode"=>"0", "vlFlavourIdReference"=>"nob_sw_flavour", "vlReference"=>"nwro1_vld_003"}, {"instantiateMode"=>"1", "vlFlavourIdReference"=>"nob_gijia_flavour", "vlReference"=>"nwro1_vld_004"}, {"instantiateMode"=>"1", "vlFlavourIdReference"=>"nob_endu_flavour1", "vlReference"=>"nwro1_vld_005"}], "constituentVnf"=>nil, "constituentVnffg"=>[{"instantiateMode"=>"0", "vnffgRefrence"=>"nwro1_vnffgd_001"}, {"instantiateMode"=>"0", "vnffgRefrence"=>"nwro1_vnffgd_002"}], "maxEndPoint"=>"10", "nsdId"=>"nwro1_nsd_001", "nsdName"=>"scenario_nob", "nsdVersion"=>"1.0", "serviceAccessPoint"=>[{"cpId"=>"nob_CP1", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "type"=>"accessEP"}}, {"cpId"=>"nob_CP2", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.2.254", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"202"}}, {"cpId"=>"nob_CP3", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.12.1", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"211"}}, {"cpId"=>"nob_CP4", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.22.1", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"221"}}, {"cpId"=>"nob_CP5", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.13.1", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"212"}}, {"cpId"=>"nob_eCP6", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.13.2", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"212"}}, {"cpId"=>"nob_CP7", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "ipaddress"=>"172.16.23.1", "kiteiresourceid"=>nil, "type"=>"fixed_setting", "vlanid"=>"222"}}, {"cpId"=>"nob_eCP8", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "type"=>"ISP"}}, {"cpId"=>"nob_aCP9", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "type"=>"ISP"}}, {"cpId"=>"nob_aCP10", "maxEndPoint"=>"1", "type"=>{"connectivity_type"=>"E-Line", "type"=>"ISP"}}], "serviceDeploymentFlavour"=>[{"constituentVl"=>["nwro1_vld_001", "nwro1_vld_002", "nwro1_vld_003", "nwro1_vld_004", "nwro1_vld_005"], "constituentVnf"=>nil, "constituentVnffg"=>["nwro1_vnffgd_001", "nwro1_vnffgd_002"], "flavourKey"=>"dummy", "nsFlavourId"=>"nob_normal_flavour"}], "vld"=>[{"connectionPoint"=>["nob_CP1", "nob_CP2"], "connectivityType"=>{"serviceSubType"=>"ipv4", "serviceType"=>"layer3"}, "description"=>"サービス構築時に設定するPE間用のVL", "vldFlavour"=>["nob_core_flavour"], "vldId"=>"nwro1_vld_001", "vldName"=>"nob_pepe_l3", "vldVersion"=>"1.0"}, {"connectionPoint"=>["nob_CP5", "nob_eCP6"], "connectivityType"=>{"serviceSubType"=>"e-line", "serviceType"=>"layer2"}, "description"=>"サービス構築時に設定するPE-擬似サーバ間用のVL", "vldFlavour"=>["nob_giji_flavour"], "vldId"=>"nwro1_vld_002", "vldName"=>"nob_pesrv_l2", "vldVersion"=>"1.0"}, {"connectionPoint"=>["nob_CP7", "nob_eCP8"], "connectivityType"=>{"serviceSubType"=>"e-line", "serviceType"=>"layer2"}, "description"=>"サービス構築時に設定するPE-SW間用のVL", "vldFlavour"=>["nob_sw_flavour"], "vldId"=>"nwro1_vld_003", "vldName"=>"nob_pesw_l2", "vldVersion"=>"1.0"}, {"connectionPoint"=>["nob_CP3", "nob_aCP9"], "connectivityType"=>{"serviceSubType"=>"e-line", "serviceType"=>"layer2"}, "description"=>"加入者登録時に設定する擬似ユーザA用のVL", "vldFlavour"=>["nob_gijia_flavour"], "vldId"=>"nwro1_vld_004", "vldName"=>"nob_access_gijia_l2_m", "vldVersion"=>"1.0"}, {"connectionPoint"=>["nob_CP4", "nob_aCP10"], "connectivityType"=>{"serviceSubType"=>"e-line", "serviceType"=>"layer2"}, "description"=>"加入者登録時に設定するエンドユーザ用のVL", "vldFlavour"=>["nob_endu_flavour1", "nob_endu_flavour2"], "vldId"=>"nwro1_vld_005", "vldName"=>"nob_access_endu_l2_m", "vldVersion"=>"1.0"}], "vldFlavour"=>[{"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"1000"}], "vldFlavourId"=>"nob_core_flavour"}, {"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"500"}], "vldFlavourId"=>"nob_giji_flavour"}, {"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"500"}], "vldFlavourId"=>"nob_sw_flavour"}, {"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"100"}], "vldFlavourId"=>"nob_gijia_flavour"}, {"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"100"}], "vldFlavourId"=>"nob_endu_flavour1"}, {"bandwidthRequirements"=>[{"leaf"=>nil, "root"=>"200"}], "vldFlavourId"=>"nob_endu_flavour2"}], "vnfd"=>nil, "vnffgd"=>[{"connectionPoint"=>["nob_aCP9", "nob_CP3", "nob_CP1", "nob_CP2", "nob_CP5", "nob_eCP6"], "constituentVnfs"=>nil, "dependentVirtualLink"=>["nwro1_vld_001", "nwro1_vld_002", "nwro1_vld_004"], "description"=>"擬似ユーザA用のVNFFGD", "numberOfEndpoints"=>"6", "numberOfVirtualLinks"=>"3", "vnffgdId"=>"nwro1_vnffgd_001", "vnffgdName"=>"vnffgd_nob_a", "vnffgdVersion"=>"1.0"}, {"connectionPoint"=>["nob_aCP10", "nob_CP4", "nob_CP1", "nob_CP2", "nob_CP7", "nob_eCP8"], "constituentVnfs"=>nil, "dependentVirtualLink"=>["nwro1_vld_001", "nwro1_vld_003", "nwro1_vld_005"], "description"=>"エンドユーザ用のVNFFGD", "numberOfEndpoints"=>"6", "numberOfVirtualLinks"=>"3", "vnffgdId"=>"nwro1_vnffgd_002", "vnffgdName"=>"vnffgd_nob_b", "vnffgdVersion"=>"1.0"}]}
 
-    render :json => personal
+  def nsd_001_v1
+json_str = <<"EOS"
+{
+    "common": {
+        "createLocation": "http://nwro/v1/nsrs/nwro1_nsr_001",
+        "ngReason": "",
+        "requestNo": "e2eo1_req_no_004",
+        "resource": "http://nwro/v1/nsrs/reservations",
+        "resultCode": "0",
+        "senderSystemId": "nwro1",
+        "sequenceNo": "Seq_YYYYMMDDhhmmssXXXX"
+    },
+    "object": {
+        "constituentVl": [
+            {
+                "instantiateMode": "0",
+                "vlFlavourIdReference": "dummy_vld_flavour",
+                "vlReference": "nwro1_vld_001"
+            },
+            {
+                "instantiateMode": "0",
+                "vlFlavourIdReference": "dummy_vld_flavour",
+                "vlReference": "nwro1_vld_002"
+            },
+            {
+                "instantiateMode": "0",
+                "vlFlavourIdReference": "dummy_vld_flavour",
+                "vlReference": "nwro1_vld_003"
+            },
+            {
+                "instantiateMode": "0",
+                "vlFlavourIdReference": "dummy_vld_flavour",
+                "vlReference": "nwro1_vld_004"
+            }
+        ],
+        "constituentVnf": [
+            {
+                "constraint": "initial",
+                "instantiateMode": "0",
+                "numberOfInstances": "1",
+                "vnfReference": "nwro1_vnfd_001"
+            },
+            {
+                "constraint": "initial",
+                "instantiateMode": "0",
+                "numberOfInstances": "1",
+                "vnfReference": "nwro1_vnfd_002"
+            },
+            {
+                "constraint": "initial",
+                "instantiateMode": "0",
+                "numberOfInstances": "1",
+                "vnfReference": "nwro1_vnfd_003"
+            },
+            {
+                "constraint": "initial",
+                "instantiateMode": "0",
+                "numberOfInstances": "1",
+                "vnfReference": "nwro1_vnfd_004"
+            }
+        ],
+        "constituentVnffg": [
+            {
+                "instantiateMode": "0",
+                "vnffgRefrence": "nwro1_vnffgd_001"
+            },
+            {
+                "instantiateMode": "0",
+                "vnffgRefrence": "nwro1_vnffgd_002"
+            }
+        ],
+        "maxEndPoint": "20",
+        "nsdId": "nwro1_nsd_001",
+        "nsdName": "sn-a_nsd",
+        "nsdVersion": "1.0",
+        "serviceAccessPoint": [
+            {
+                "cpId": "sn_a-acp_m",
+                "maxEndPoint": "10",
+                "type": {
+                    "constraint": [],
+                    "endPointType": "x：コンシューマ端点",
+                    "inputType": {
+                        "setAddressType": "2",
+                        "setSapType": "1"
+                    },
+                    "instantiateMode": "1",
+                    "interfaceType": "x：外部リソース",
+                    "multiPointMode": "1"
+                }
+            },
+            {
+                "cpId": "sn_a-web_cp",
+                "maxEndPoint": "1",
+                "type": {
+                    "constraint": [],
+                    "endPointType": "x：POI",
+                    "inputType": {
+                        "setAddressType": "2",
+                        "setSapType": "0"
+                    },
+                    "instantiateMode": "0",
+                    "interfaceType": "x：外部リソース",
+                    "multiPointMode": "0"
+                }
+            },
+            {
+                "cpId": "sn_a-contents_cp",
+                "maxEndPoint": "1",
+                "type": {
+                    "constraint": [],
+                    "endPointType": "x：POI",
+                    "inputType": {
+                        "setAddressType": "2",
+                        "setSapType": "0"
+                    },
+                    "instantiateMode": "0",
+                    "interfaceType": "x：外部リソース",
+                    "multiPointMode": "0"
+                }
+            },
+            {
+                "cpId": "sn_a-wireless_cp_m",
+                "maxEndPoint": "10",
+                "type": {
+                    "constraint": [],
+                    "endPointType": "x：コンシューマ端点",
+                    "inputType": {
+                        "setAddressType": "2",
+                        "setSapType": "1"
+                    },
+                    "instantiateMode": "0",
+                    "interfaceType": "x：外部リソース",
+                    "multiPointMode": "1"
+                }
+            }
+        ],
+        "serviceDeploymentFlavour": [
+            {
+                "constituentVl": [
+                    "nwro1_vld_001",
+                    "nwro1_vld_002",
+                    "nwro1_vld_003",
+                    "nwro1_vld_004"
+                ],
+                "constituentVnf": [
+                    "nwro1_vnfd_001",
+                    "nwro1_vnfd_002",
+                    "nwro1_vnfd_003",
+                    "nwro1_vnfd_004"
+                ],
+                "constituentVnffg": [
+                    "nwro1_vnffgd_001",
+                    "nwro1_vnffgd_002"
+                ],
+                "nsFlavourId": "sn-a_dummy_nsflavour"
+            }
+        ],
+        "vld": [
+            {
+                "connectionPoint": [
+                    "sn_a-acp_m",
+                    "sn_a-vbras_a"
+                ],
+                "connectivityType": {
+                    "serviceSubType": "E-LAN(VPN)",
+                    "serviceType": "L2"
+                },
+                "description": "インターネット接続用アクセスNW",
+                "vldFlavour": [
+                    "vld_flavour_001",
+                    "vld_flavour_002"
+                ],
+                "vldId": "nwro1_vld_001",
+                "vldName": "sn_a-access_l2",
+                "vldVersion": "1.0"
+            },
+            {
+                "connectionPoint": [
+                    "sn_a-vbras_l2tp",
+                    "sn_a-vnte_l2tp"
+                ],
+                "connectivityType": {
+                    "serviceSubType": "IPv4",
+                    "serviceType": "L3"
+                },
+                "description": "インターネット接続用共通NW①",
+                "vldFlavour": [
+                    "vld_flavour_001",
+                    "vld_flavour_002"
+                ],
+                "vldId": "nwro1_vld_002",
+                "vldName": "sn_a-core_l3_1",
+                "vldVersion": "1.0"
+            },
+            {
+                "connectionPoint": [
+                    "sn_a-vnte_lns_gcp",
+                    "sn_a-web_cp"
+                ],
+                "connectivityType": {
+                    "serviceSubType": "IPv4",
+                    "serviceType": "L3"
+                },
+                "description": "インターネット接続用共通NW②",
+                "vldFlavour": [
+                    "vld_flavour_001",
+                    "vld_flavour_002"
+                ],
+                "vldId": "nwro1_vld_003",
+                "vldName": "sb_a-core_l3_2",
+                "vldVersion": "1.0"
+            },
+            {
+                "connectionPoint": [
+                    "sn_a-contents_cp",
+                    "sn_a-wireless_cp_m",
+                    "sn_a-kyocho_gcp_m"
+                ],
+                "connectivityType": {
+                    "serviceSubType": "E-LAN(VPN)",
+                    "serviceType": "L2"
+                },
+                "description": "無線用共通NW",
+                "vldFlavour": [
+                    "vld_flavour_001",
+                    "vld_flavour_002"
+                ],
+                "vldId": "nwro1_vld_004",
+                "vldName": "sb_a-wireless_ctl_l2",
+                "vldVersion": "1.0"
+            }
+        ],
+        "vldFlavour": [
+            {
+                "bandwidthRequirements": [
+                    {
+                        "leaf": "100(M)",
+                        "root": "100(M)"
+                    }
+                ],
+                "vldFlavourId": "dummy_vld_flavour"
+            }
+        ],
+        "vnfd": [
+            "nwro1_vnfd_001",
+            "nwro1_vnfd_002",
+            "nwro1_vnfd_003",
+            "nwro1_vnfd_004"
+        ],
+        "vnffgd": [
+            {
+                "connectionPoint": [
+                    "sn_a-acp_m",
+                    "sn_a-vbras_a",
+                    "sn_a-vbras_l2tp",
+                    "sn_a-vnte_l2tp",
+                    "sn_a-vnte_lns_gcp",
+                    "sn_a-vlns_gcp",
+                    "sn_a-web_cp"
+                ],
+                "constituentVnfs": [
+                    "nwro1_vnfd_001",
+                    "nwro1_vnfd_002",
+                    "nwro1_vnfd_003"
+                ],
+                "dependentVirtualLink": [
+                    "nwro1_vld_001",
+                    "nwro1_vld_002",
+                    "nwro1_vld_003"
+                ],
+                "description": "SSネットスライス",
+                "numberOfEndpoints": "7",
+                "numberOfVirtualLinks": "3",
+                "vnffgdId": "nwro1_vnffgd_001",
+                "vnffgdName": "sn_a-internet",
+                "vnffgdVersion": "1.0"
+            },
+            {
+                "connectionPoint": [
+                    "sn_a-contents_cp",
+                    "sn_a-wireless_cp_m",
+                    "sn_a-kyocho_gcp_m"
+                ],
+                "constituentVnfs": [
+                    "nwro1_vnfd_004"
+                ],
+                "dependentVirtualLink": [
+                    "nwro1_vld_004"
+                ],
+                "description": "SSネットスライス",
+                "numberOfEndpoints": "3",
+                "numberOfVirtualLinks": "1",
+                "vnffgdId": "nwro1_vnffgd_002",
+                "vnffgdName": "sn_a-wireless",
+                "vnffgdVersion": "1.0"
+            }
+        ]
+    }
+}
+EOS
+    render :json => JSON.parse(json_str)
 
   end
+
 end
