@@ -11,6 +11,7 @@ gem 'sdoc',         '0.4.0', group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'bootstrap-sass'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
